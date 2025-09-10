@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-ds)k9c+bd90616n7bp)3+%wwacsi$=otv43)9d!gb-57u($nkj
 PRODUCTION = os.getenv('PRODUCTION', 'False').lower() == 'true'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+CSRF_TRUSTED_ORIGINS = ["https://syifa-anabella-footballnews.pbp.cs.ui.ac.id"]
 ALLOWED_HOSTS = ["localhost", "127.0.0.1","syifa-anabella-footballnews.pbp.cs.ui.ac.id"]
 
 
@@ -60,7 +60,7 @@ ROOT_URLCONF = 'football_news.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
